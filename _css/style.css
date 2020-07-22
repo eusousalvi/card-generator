@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* FORM */
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 300px;
+
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+
+    margin-bottom: 100px;
+}
+
+.formLine{
+    position: relative;
+}
+
+.formLine__input{    
+    background-color: transparent;
+    
+    border: none;
+    border-bottom: 1px solid #856b04;
+
+    margin: 10px;
+    width: 300px;
+    height: 50px;
+
+    line-height: 30px;
+    padding-top: 15px;
+
+    color: #fff;
+    font-size: 30px;
+}
+
+.formLine__label{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    color: #FFFFFF99;
+
+    transition: all .5s;
+    pointer-events: none;
+}
+
+.formLine__input:focus{
+    outline: none;
+}
+
+.formLine__input:focus ~ .formLine__label, 
+.formLine__input:active ~ .formLine__label,
+.formLine__input:valid ~ .formLine__label {
+    font-size: 10px;
+    left: -15px;
+    top: 35px;
+    transform: rotate(-90deg);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form__buttons{
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+
+    padding: 30px;
+}
+
+.button{
+    width: 130px;
+    height: 30px;
+    display: block;
+    text-align: center;
+
+    background-color: #111;
+
+    border: none;
+    border-bottom: 1px solid #856b04;
+    border-radius: 3px;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: #fff;
+
+    transition: all .3s;
+}
+
+.button:hover{
+    border-bottom: 5px solid #856b04;
+}
+
+/* CARD */
+
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 800px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 450px;
+    height: 200px;
+
+    border-radius: 50% 50% 50% 0;
+    box-shadow: 0 0 15px 3px #00000044;
+    overflow: hidden;
+
+    transition: all .5s;
+    transform-origin: bottom left;
+    transform: scale(0);
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.card__name{
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+}
+
+.card__phone{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 5px;
+}
+
+.card__img{
+    max-width: 200px;
+}
+
+.card--on{
+    transform: scale(1);
+    border-radius: 8px;
+}
