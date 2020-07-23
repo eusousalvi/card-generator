@@ -10,27 +10,28 @@
 
 <body>
     <main class="main">
-        <div class="form">
+        <form class="form" id="form">
             <div class="formLine">
                 <input id="name" name="name" type="text" class="formLine__input" required autocomplete="off">
                 <label for="name" class="formLine__label">Name</label>
             </div>
 
             <div class="formLine">
-                <input id="phone" name="phone" type="text" class="formLine__input" required autocomplete="off">
+                <input id="phone" name="phone" type="tel" class="formLine__input" required autocomplete="off"
+                    maxlength="13">
                 <label for="phone" class="formLine__label">Phone</label>
             </div>
 
             <div class="formLine">
-                <input id="imgUrl" name="imgUrl" type="text" class="formLine__input" required autocomplete="off">
+                <input id="imgUrl" name="imgUrl" type="url" class="formLine__input" required autocomplete="off">
                 <label for="imgUrl" class="formLine__label">Img Url</label>
             </div>
 
             <div class="form__buttons">
-                <button id="create" class="button">Create</button>
-                <button id="clear" class="button">Clear</button>
+                <button type="submit" id="create" class="button">Create</button>
+                <button type="reset" id="clear" class="button">Clear</button>
             </div>
-        </div>
+        </form>
 
         <div class="cardContainer" id="cardContainer"></div>
     </main>
